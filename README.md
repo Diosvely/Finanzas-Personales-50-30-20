@@ -25,16 +25,16 @@ finanzas como caso de estudio real.
 
 ## 🚀 Cómo usar este repositorio
 
-1. Clona el repositorio: `git clone https://github.com/tuusuario/finanzas-personales-excel-powerbi.git`
-2. Navega a la carpeta del video que te interese
-3. Descarga el archivo Excel y sigue las instrucciones del README
+1. Clona el repositorio: `git clone https://github.com/Diosvely/Finanzas-Personales-50-30-20.git
+2. Navega a la carpeta del video que te interese y archivos en cada carpeta
+3. Descarga los archivo de Excel y sigue las instrucciones.
 
 ## 👤 Autor
 
 **Diosvely Perez Arteaga**
-- YouTube: [@tucanal](https://youtube.com/@tucanal)
-- LinkedIn: [/in/tuperfil](https://linkedin.com/in/tuperfil)
-- GitHub: [@tuusuario](https://github.com/tuusuario)
+- YouTube: [@Canal](https://youtube.com/@tucanal)
+- LinkedIn: (https://www.linkedin.com/in/diosvelyperezarteaga)
+- GitHub: (https://github.com/Diosvely)
 
 ## 📜 Licencia
 
