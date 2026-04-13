@@ -1,41 +1,103 @@
-# 💰 Finanzas Personales con EXCEL
+ # 📊 Finanzas Personales 50/30/20 — Excel a Data Analytics
 
-   Serie educativa que combina **economía española** y **tecnología** para 
-aprender a gestionar tus finanzas personales mientras dominas Excel.
+Proyecto educativo donde se construye, paso a paso, un sistema completo de análisis financiero personal.
 
-## 🎬 Serie de Videos
+Este repositorio forma parte de una serie de 3 videos donde evolucionamos desde un Excel básico hasta un modelo analítico con DAX.
 
-| Video | Tema | Herramientas | Estado |
-|-------|------|--------------|--------|
-| [**Video 1**](./video-1-excel-basico/) | Excel Básico: Presupuesto Familiar | Fórmulas, VBA, Dashboard | ✅ Completado |
-| [**Video 2**](./video-2-power-query/) | Power Query: Datos Bancarios | Transformación, Modelado | 🔄 En progreso |
-| [**Video 3**](./video-3-dax-dashboard/) | DAX: Análisis Avanzado | Medidas, Tablas Dinámicas | ⏳ Próximamente |
+---
 
 ## 🎯 Objetivo
 
-Llevar al usuario desde **cero conocimiento** hasta poder crear 
-**dashboards profesionales** en Excel, usando sus propias 
-finanzas como caso de estudio real.
+Aprender a gestionar tus finanzas personales mientras desarrollas habilidades reales de análisis de datos:
 
-## 📚 Metodología: Regla 50/30/20
+* Estructuración de datos
+* Automatización en Excel
+* Modelado de datos
+* Análisis con DAX
 
-- **50%** máximo en Gastos Fijos
-- **30%** máximo en Gastos Variables  
-- **20%** mínimo en Ahorro
+---
+
+## 🎬 Estructura de la serie
+
+### 📁 01 — Presupuesto (Excel)
+
+Sistema de planificación financiera desde cero:
+
+* Diseño de estructura de datos
+* Uso de fórmulas (SI.ERROR, BUSCARX, etc.)
+* Automatización con VBA
+* KPIs financieros
+
+👉 Punto de partida del proyecto
+
+---
+
+### 📁 02 — Datos Reales (Power Query + Modelo)
+
+Transformación de datos bancarios:
+
+* Importación de datos
+* Limpieza y transformación (Power Query)
+* Modelo en estrella con Power Pivot
+
+👉 Paso de Excel a modelo de datos
+
+---
+
+### 📁 03 — Desviaciones (DAX + Análisis)
+
+Análisis avanzado:
+
+* Medidas en DAX
+* Tablas dinámicas
+* Comparación Plan vs Real
+* Dashboard financiero
+
+👉 Conversión de datos en decisiones
+
+---
+
+## 🧠 Metodología
+
+Se utiliza la regla 50/30/20:
+
+* 50% → Gastos fijos
+* 30% → Gastos variables
+* 20% → Ahorro
+
+---
 
 ## 🚀 Cómo usar este repositorio
 
-1. Clona el repositorio: `git clone https://github.com/Diosvely/Finanzas-Personales-50-30-20.git
-2. Navega a la carpeta del video que te interese y archivos en cada carpeta
-3. Descarga los archivo de Excel y sigue las instrucciones.
+1. Empieza por la carpeta **01presupuesto**
+2. Descarga el archivo Excel
+3. Introduce tus datos
+4. Sigue la evolución del proyecto en los siguientes módulos
+
+---
+
+## 💡 Enfoque del proyecto
+
+Este proyecto no trata solo de Excel.
+
+Trata de aprender a:
+
+👉 Pensar los datos antes de analizarlos
+👉 Automatizar procesos repetitivos
+👉 Convertir información en decisiones
+
+---
 
 ## 👤 Autor
 
-**Diosvely Perez Arteaga**
-- YouTube: [@Canal](https://youtube.com/@tucanal)
-- LinkedIn: (https://www.linkedin.com/in/diosvelyperezarteaga)
-- GitHub: (https://github.com/Diosvely)
+Diosvely Pérez Arteaga
+
+* LinkedIn: https://www.linkedin.com/in/diosvelyperezarteaga
+* GitHub: https://github.com/Diosvely
+
+---
 
 ## 📜 Licencia
 
-MIT License - Libre para usar y modificar
+MIT License
+
