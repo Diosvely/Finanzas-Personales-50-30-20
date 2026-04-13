@@ -136,7 +136,12 @@ En el vídeo se explica:
 - Qué errores cometí y cómo los resolví
 
 ---
+## 📥 ¿Problemas para descargar desde GitHub?
 
+Si no estás familiarizado con GitHub, puedes descargarlo directamente desde Google Drive:
+
+👉 [Descargar archivo Excel desde Google Drive](https://drive.google.com/file/d/1o8NZMudJup22gAY8u5-vRahDeFgRlaGM/view?usp=sharing)
+---
 ## 👤 Autor
 
 **Diosvely Pérez Arteaga** — Controller Financiero en transición hacia Data Analytics
