@@ -1,114 +1,145 @@
-# 📊 Módulo 1 — Sistema de Presupuesto en Excel
+# 📁 Módulo 01 — Sistema de Presupuesto en Excel
 
-Este módulo contiene el desarrollo completo de un sistema de planificación financiera personal construido en Excel.
-
-No es solo una plantilla: es un modelo diseñado con lógica de control de gestión (FP&A), pensado para estructurar datos, automatizar procesos y facilitar la toma de decisiones.
-
----
-
-## 🎯 Objetivo del módulo
-
-Construir un sistema que permita:
-
-* Planificar ingresos y gastos de forma estructurada
-* Analizar la distribución financiera mensual
-* Calcular indicadores clave (KPIs)
-* Sentar la base para un modelo analítico más avanzado
+> *Este no es un template de presupuesto.*
+> *Es un modelo de datos financieros construido con lógica de Control de Gestión,*
+> *que sienta las bases para un sistema analítico completo.*
 
 ---
 
-## 🧠 Enfoque del modelo
+## ⚡ El punto de partida
 
-El archivo está diseñado siguiendo principios de análisis de datos:
+Antes de conectar Power BI, antes de escribir una query SQL, hay una pregunta que todo analista de datos debería hacerse:
 
-* Separación de datos y lógica
-* Uso de categorías normalizadas
-* Evitar duplicidad de información
-* Automatización de procesos repetitivos
+**¿Están bien estructurados mis datos en origen?**
 
-👉 Este enfoque permite escalar el modelo hacia Power Query, Power Pivot y DAX.
+Este módulo responde esa pregunta aplicándola a un caso real: las finanzas de una familia española — *Los Emigrantes* — con ingresos, gastos fijos, gastos variables y una meta de ahorro mensual.
 
----
-
-## ⚙️ Funcionalidades principales
-
-* 📅 Presupuesto anual (2025)
-* 📊 Distribución mensual automática
-* 📈 Cálculo de acumulados (YTD)
-* 🧮 KPIs financieros (ahorro, ratios básicos)
-* 🤖 Automatización con botones (VBA)
-* 🧩 Estructura preparada para evolución a modelo de datos
+El modelo no está diseñado para ser bonito. Está diseñado para **escalar**.
 
 ---
 
-## 🧾 Estructura del archivo
+## 🗂 Estructura del archivo
 
-El modelo se organiza en varias hojas:
+El libro Excel está organizado como un mini-sistema de información, no como una hoja de cálculo tradicional:
 
-* **Instrucciones** → guía de uso
-* **Categorías** → base de datos estructurada
-* **Plan-Patrón** → plantilla de entrada
-* **Plan2025** → cálculo y consolidación
-* **Dashboard** → visualización inicial
+| Hoja | Rol en el modelo | Editable |
+|------|-----------------|----------|
+| **Instrucciones** | Guía de uso y documentación | No |
+| **Categorías** | Tabla de dimensiones — catálogo maestro | Sí |
+| **Plan-Patrón** | Entrada de datos — presupuesto de referencia | Sí |
+| **Plan2025** | Tabla de hechos — cálculo y consolidación anual | Sí |
+| **Dashboard** | Capa de visualización — resumen ejecutivo | No |
+
+> Esta separación entre **dimensiones**, **hechos** y **visualización** no es casual.  
+> Es la misma lógica que usaremos en el Módulo 02 cuando construyamos el modelo en estrella.
+
+---
+
+## ⚙️ Funcionalidades implementadas
+
+### Modelo de datos
+- Categorías normalizadas con lista desplegable concatenada (`Tipo - Categoría (Descripción)`)
+- `BUSCARX` para clasificación automática desde la tabla de dimensiones
+- Sin duplicidad de información entre hojas
+
+### Cálculo y análisis
+- Presupuesto mensual y anual con acumulados YTD automáticos
+- 5 KPIs financieros con umbrales definidos:
+
+| KPI | Verde (Óptimo) | Amarillo (Precaución) | Rojo (Alerta) |
+|-----|---------------|----------------------|---------------|
+| Ganancia / Ingreso | > 15% | 10–15% | < 10% |
+| Gasto Fijo / Ingreso | < 45% | 45–50% | > 50% |
+| Gasto Variable / Ingreso | < 35% | 35–40% | > 40% |
+| Vivienda / Ingreso | < 30% | 30–35% | > 35% |
+| Alimentación / Ingreso | < 15% | 15–25% | > 25% |
+
+- Formato condicional automático (semáforo verde / amarillo / rojo)
+- `SI.ERROR` en todos los KPIs para gestión de datos vacíos
+
+### Automatización
+- Botón **"Insertar Plan"** — carga el Plan-Patrón al modelo mensual con VBA
+- Botón **"Limpiar Plan"** — resetea los datos de entrada
 
 ---
 
 ## ▶️ Cómo usar el archivo
 
-1. Introduce tu presupuesto en la hoja **Plan-Patrón**
-2. Usa el botón para cargar los datos al modelo
-3. Revisa la distribución mensual en **Plan2025**
-4. Analiza tus resultados en el **Dashboard**
+1. Abre el archivo y **habilita las macros**
+2. Ve a **Plan-Patrón** e introduce tu presupuesto de referencia mensual
+3. Pulsa **"Insertar Plan"** para cargar los datos
+4. Registra tus gastos reales mes a mes en **Plan2025**
+5. Revisa los KPIs — si alguno aparece en rojo, es una señal de alerta
+6. Consulta el resumen visual en **Dashboard**
 
 ---
 
-## 📚 Metodología aplicada
+## 🧠 Decisiones de diseño — por qué está construido así
 
-Se utiliza la regla 50/30/20:
+Esta sección es la más importante del README.  
+Un template cualquiera no explica sus decisiones. Un modelo diseñado con criterio, sí.
 
-* 50% → Gastos fijos
-* 30% → Gastos variables
-* 20% → Ahorro
+**¿Por qué una hoja de Categorías separada?**  
+Para tener una única fuente de verdad. Si cambias una categoría, el cambio se propaga automáticamente. Es el mismo principio de una tabla de dimensiones en un modelo analítico.
 
-Este modelo permite validar si tu distribución financiera cumple con estos criterios.
+**¿Por qué los KPIs están en Plan2025 y no en el Dashboard?**  
+Porque el cálculo y la visualización son responsabilidades distintas. El Dashboard consume, no calcula. Esto facilita la migración futura a Power BI.
 
----
+**¿Por qué VBA para los botones?**  
+Para automatizar la carga del plan mensual sin que el usuario tenga que copiar y pegar manualmente. Es una decisión de usabilidad, no de complejidad técnica.
 
-## 🎬 Video explicativo
-
-📺 Este módulo forma parte del **Video 1 de la serie**:
-
-👉 (Próximamente disponible)
-
-En este video se explica paso a paso:
-
-* Cómo se construyó el modelo
-* Decisiones de diseño
-* Automatización implementada
-* Cómo utilizarlo correctamente
+**¿Por qué la familia se llama "Los Emigrantes"?**  
+Porque el caso de uso está pensado para una familia de origen latinoamericano viviendo en España, con categorías específicas como *Remesas*. Es un caso real, no ficticio genérico.
 
 ---
 
-## 🔗 Relación con el proyecto completo
+## 📊 Resultado del modelo — datos reales del caso
 
-Este es el punto de partida del sistema.
+Con los datos cargados para 2025, el modelo muestra:
 
-En los siguientes módulos se trabajará:
+| Concepto | Importe Anual | % sobre Ingreso |
+|----------|--------------|-----------------|
+| Ingreso Total | 33.551 € | 100% |
+| Gastos Fijos | 15.600 € | 46.5% ⚠️ |
+| Gastos Variables | 12.894 € | 38.4% ⚠️ |
+| Ahorro / Utilidad | 5.057 € | 15.1% ✅ |
 
-* 📁 02 → Datos reales (Power Query + modelo en estrella)
-* 📁 03 → Análisis (DAX + tablas dinámicas + desviaciones)
+> La tasa de ahorro del 15% cumple el umbral mínimo de la regla 50/30/20.  
+> Los gastos fijos y variables están en zona amarilla — Normal, con margen de mejora.
+
+---
+
+## 🔗 Conexión con los siguientes módulos
+
+Este archivo es el **origen de datos** del sistema completo:
+
+```
+Módulo 01 (Excel)
+    └── Exportación estructurada
+        └── Módulo 02 (Power Query + modelo en estrella)
+            └── Medidas DAX
+                └── Módulo 03 (Dashboard Plan vs Real)
+```
+
+En el Módulo 02 tomaremos los datos de este Excel, los combinaremos con transacciones bancarias reales y construiremos el modelo relacional.
 
 ---
 
-## 💡 Qué demuestra este proyecto
+## 📺 Vídeo explicativo
 
-Este módulo no solo muestra conocimientos de Excel.
+📺 **Vídeo 1 de la serie** — *(próximamente disponible)*
 
-Demuestra:
-
-* Pensamiento estructurado
-* Lógica financiera
-* Capacidad de automatización
-* Diseño de modelos escalables
+En el vídeo se explica:
+- Cómo se construyó el modelo desde cero
+- Las decisiones de diseño y por qué se tomaron
+- Cómo usar el archivo con datos propios
+- Qué errores cometí y cómo los resolví
 
 ---
+
+## 👤 Autor
+
+**Diosvely Pérez Arteaga** — Controller Financiero en transición hacia Data Analytics
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/diosvelyperezarteaga)
+[![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?style=flat&logo=github)](https://github.com/Diosvely)
