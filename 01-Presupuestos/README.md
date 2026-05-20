@@ -158,14 +158,5 @@ Si no estás familiarizado con GitHub, puedes descargar el archivo directamente 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/diosvelyperezarteaga)
 [![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?style=flat&logo=github)](https://github.com/Diosvely)
 
-👉 (https://drive.google.com/file/d/1o8NZMudJup22gAY8u5-vRahDeFgRlaGM/view?usp=sharing)
 
-## 👤 Autor
-
-**Diosvely Pérez Arteaga** — Controller Financiero en transición hacia Data Analytics
-
-
-
-
----
 
