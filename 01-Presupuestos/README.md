@@ -25,7 +25,7 @@ El libro Excel está organizado como un minisistema de información, no como una
 | Instrucciones | Guía de uso y documentación | No |
 | Categorías | Tabla de dimensiones — catálogo maestro | Sí |
 | Plan-Patrón | Entrada de datos — presupuesto de referencia | Sí |
-| Plan2025 | Tabla de hechos — cálculo y consolidación anual | Sí |
+| Presupuesto | Tabla de hechos — cálculo y consolidación anual | Sí |
 | Panel | Capa de visualización — resumen ejecutivo | No |
 
 Esta separación entre **dimensiones**, **hechos** y **visualización** no es casual. Es la misma lógica que se aplica en el Módulo 02 con el modelo en estrella.
@@ -68,7 +68,7 @@ Esta separación entre **dimensiones**, **hechos** y **visualización** no es ca
 1. Abre el archivo y habilita las macros
 2. Ve a **Plan-Patrón** e introduce tu presupuesto de referencia mensual
 3. Pulsa **"Insertar Plan"** para cargar los datos
-4. Registra tus gastos reales mes a mes en **Plan2025**
+4. Registra tus gastos reales mes a mes en **Presupuesto**
 5. Revisa los KPIs — si alguno aparece en rojo, es una señal de alerta
 6. Consulta el resumen visual en **Panel**
 
@@ -82,7 +82,7 @@ Esta sección es la más importante del README. Un template cualquiera no explic
 
 Para tener una única fuente de verdad. Si cambias una categoría, el cambio se propaga automáticamente. Es el mismo principio de una tabla de dimensiones en un modelo analítico.
 
-### ¿Por qué los KPIs están en Plan2025 y no en el Panel?
+### ¿Por qué los KPIs están en Presupuesto y no en el Panel?
 
 Porque el cálculo y la visualización son responsabilidades distintas. El Panel consume, no calcula. Esto facilita la migración futura a Power BI.
 
